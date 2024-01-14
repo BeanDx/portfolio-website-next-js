@@ -62,14 +62,20 @@ const ProjectsSection = () => {
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.3, delay: index * 0.4 }}
           >
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-            />
+            <div
+              onClick={() => {
+                window.open(project.gitUrl, "_blank");
+              }}
+            >
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                imgUrl={project.image}
+                gitUrl={project.gitUrl}
+                previewUrl={project.previewUrl}
+              />
+            </div>
           </motion.li>
         ))}
       </ul>
