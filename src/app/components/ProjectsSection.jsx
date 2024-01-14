@@ -61,6 +61,7 @@ const ProjectsSection = () => {
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.3, delay: index * 0.4 }}
+            whileHover={{ scale: 1.2 }}
           >
             <div
               onClick={() => {
